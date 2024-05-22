@@ -84,7 +84,7 @@ enum toolbarItem //The items of the  toolbar (you should add more items)
 	ITM_ICE,
 	ITM_TREE,
 	ITM_HOME,
-	ITM_ROCKET,
+	ITM_CAT,
 	ITM_INCREASE_SIZE,
 	ITM_DECREASE_SIZE,
 	ITM_ROTATE,

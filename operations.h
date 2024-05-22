@@ -13,109 +13,114 @@ public:
 	//Function Act:
 	//Implements the action that should be taken by this operation
 	//Should be overriden by derived classes
-	virtual void Act() =0;
-	 void resizeUp() ;	
-	 void resizeDown();
-	// void rotate90clockwise();
+	virtual void Act() = 0;
+	void resizeUp();
+	void resizeDown();
+	//void rotate90clockwise();
 };
 /////////////////////////////////// class operAddSign  //////////////////
 //Responsible for 
 //1- collectign data about a new Sign shape to add
 //2- Adding the new shape to the list of shapes (throgh the grid class)
-class operAddSign:public operation
+class operAddSign :public operation
 {
 public:
 	operAddSign(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
-class operaddcar : public operation
+class operaddCar : public operation
 {
 public:
-	operaddcar(game* r_pGame);
-	virtual void Act();
+	operaddCar(game* r_pGame);
+	virtual void Act()override;
 };
 class operaddice : public operation
 {
 public:
 	operaddice(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
-class operaddtree : public operation
+class operaddTree : public operation
 {
 public:
-	operaddtree(game* r_pGame);
-	virtual void Act();
+	operaddTree(game* r_pGame);
+	virtual void Act()override;
 };
-class operaddhome : public operation
+class operaddHouse : public operation
 {
 public:
-	operaddhome(game* r_pGame);
-	virtual void Act();
+	operaddHouse(game* r_pGame);
+	virtual void Act()override;
 };
-class operaddrocket : public operation
+class operaddCat : public operation
 {
 public:
-	operaddrocket(game* r_pGame);
-	virtual void Act();
+	operaddCat(game* r_pGame);
+	virtual void Act()override;
 };
-class operaddinc : public operation
+class operaddresizeUp : public operation
 {
 public:
-	operaddinc(game* r_pGame);
-	virtual void Act();
+	operaddresizeUp(game* r_pGame);
+	virtual void Act()override;
 };
 class operadddec : public operation
 {
 public:
 	operadddec(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
 class operaddrotate : public operation
 {
 public:
 	operaddrotate(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
 class operaddrefresh : public operation
 {
 public:
 	operaddrefresh(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
 class operaddhint : public operation
 {
 public:
 	operaddhint(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
 class operadddelete : public operation
 {
 public:
 	operadddelete(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
 class operaddselectlevel : public operation
 {
 public:
 	operaddselectlevel(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
 class operaddsave : public operation
 {
 public:
 	operaddsave(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
 class operaddload : public operation
 {
 public:
 	operaddload(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
 class operaddexit : public operation
 {
 public:
 	operaddexit(game* r_pGame);
-	virtual void Act();
+	virtual void Act()override;
 };
-
+class operaddmatch : public operation
+{
+public:
+	operaddmatch(game* r_pGame);
+	virtual void Act()override;
+};

@@ -15,7 +15,11 @@ enum keytype {
 	ASCII,
 	ARROW,
 	FUNCTION,
-	ESCAPE
+	ESCAPE,
+	LEFT_ARROW,
+	RIGHT_ARROW,
+	UP_ARROW,
+	DOWN_ARROW
 };
 
 

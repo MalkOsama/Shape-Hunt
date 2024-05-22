@@ -1,6 +1,7 @@
 #pragma once
 #include "CompositeShapes.h"
 #include <vector>
+#include <fstream>
 
 class game;
 
@@ -29,7 +30,13 @@ public:
 	bool addShape(shape* newShape);
 	void setActiveShape(shape* actShape);
 	void drawShapes() const;
-	
+	void deleteshape();
+	void generateRandomShape();
+	void SaveShapes(ofstream& OutFile);
+
+	void LoadShapes(ifstream& InFile);
+
 	shape* getActiveShape();
+	bool match();
 };
 

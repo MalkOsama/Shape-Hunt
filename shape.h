@@ -39,6 +39,7 @@ protected:
 	color borderColor;	//shape border color
 	float rotationAngle; 
 	float size;
+	bool matched;
 public:
     shape(game* r_pGame, point ref,float rotationAngle = 0, float size = 1.0);
     virtual void draw() const=0;//for a shape to draw itself on the screen
@@ -50,19 +51,28 @@ public:
 	//-- Decide the parameters that you should pass to each function	
 
 	//virtual void rotate() = 0;	//Rotate the shape
-    virtual void resizeUp() = 0;	//Resize the shape
-	virtual void resizeDown() = 0;
+	virtual void resizeUp(double factor)=0;
+	virtual void resizeDown(double factor)=0;
+	virtual bool match(shape* sh) const = 0;
+	virtual void moveBy(int dx, int dy);
+	virtual point getCenter() const = 0;
 	//virtual void move() = 0;		//Move the shape
 	virtual void rotateclockwise90() =0;
 	virtual void setFillColor(const color& fillColor);
-	//virtual void save(ofstream &OutFile) = 0;	//Save the shape parameters to the file
-	//virtual void load(ifstream &Infile) = 0;	//Load the shape parameters to the file
+	 void save(ofstream &OutFile) ;	//Save the shape parameters to the file
+	 void Load(ifstream &Infile);	//Load the shape parameters to the file
 	// Method to set the rotation angle of the shape
 	void setRotationAngle(float angle);
 	void setSize(float factor);
 
-	
+
+	/*bool isMatched() const;
+	void setMatched(bool matched);
+	bool isOverlapping(const shape* other) const;
+	void Overlap(shape* other);*/
+
 };
+
 
 
 
